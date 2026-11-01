@@ -1,176 +1,180 @@
 # **One-Handed Keyboard**
 
-> 我们收到了一封特殊的邮件。来信者的女儿在上学途中不幸遭到重型卡车碾压，右手永久失去了功能，用电脑的时候手得在键盘和鼠标之间频繁切换，打字很慢，很累。他想让我们帮他女儿做一个单手键盘。
+> We received an unusual email. The writer's daughter had been run over by a heavy truck on her way to school and permanently lost the use of her right hand. Using a computer meant moving her hand back and forth between the keyboard and the mouse all the time, so typing was slow and exhausting. He asked us to build a one-handed keyboard for his daughter.
 
-![左手小键盘](/Docs/Image/左手小键盘右侧面.jpg "左手小键盘")
+*This README is translated from the original Chinese. Part numbers, product names and code identifiers are kept as in the original.*
 
-![左手大键盘](/Docs/Image/左手大键盘右侧.jpg "左手大键盘")
+![Left-hand small keyboard, right side](/Docs/Image/左手小键盘右侧面.jpg "Left-hand small keyboard")
 
-这是一把单模且集成了轨迹球的机械键盘，固件使用[QMK](https://github.com/qmk/qmk_firmware)，感谢所有为 QMK 社区做出贡献的开发者。
+![Left-hand large keyboard, right side](/Docs/Image/左手大键盘右侧.jpg "Left-hand large keyboard")
 
-键盘制作参考：[【何同学】我们做了个特别的键盘…](https://www.bilibili.com/video/BV1DtjAzUEb9)
+This is a wired-only (single-mode) mechanical keyboard with an integrated trackball. The firmware is built on [QMK](https://github.com/qmk/qmk_firmware) — our thanks to everyone who contributes to the QMK community.
 
-硬件开源：[HTXStudio单手键盘](https://oshwhub.com/htx-studio/One-Handed_Keyboard)
+Reference for how this keyboard was made: [He Tongxue: "We made a very unusual keyboard…"](https://www.bilibili.com/video/BV1DtjAzUEb9)
+
+Open-source hardware: [HTXStudio One-Handed Keyboard](https://oshwhub.com/htx-studio/One-Handed_Keyboard) on OSHWHub (LCSC/JLC open-source hardware platform)
 
 [GitHub repository](https://github.com/htx-studio/One-Handed-Keyboard)
 
 [Gitee repository](https://gitee.com/htxstudio/one-handed-keyboard)
 
-开发环境与搭建参考[这里](https://docs.qmk.fm/newbs_getting_started "设置您的QMK环境")，固件源码在[这里](https://github.com/htx-studio/qmk_firmware/tree/master/keyboards/htx_studio)。
+For the development environment and how to set it up, see [here](https://docs.qmk.fm/newbs_getting_started "Setting up your QMK environment"). The firmware source is [here](https://github.com/htx-studio/qmk_firmware/tree/master/keyboards/htx_studio).
 
-本仓库的资料内容包括：
+This repository contains:
 
-* 左右手一共三款键盘的8块PCB，提供立创EDA工程。
-* VIA改键配置文件，以及编译完成的固件。
-* 模型设计文件。
-
----
-
-## 仓库目录结构
-
-#### Docs（文档）
-
-芯片的数据手册与图片。
-
-#### Firmware（固件）
-
-三款不同型号键盘的QMK固件，以及用于VIA改键的JSON文件。
-
-#### Hardware（硬件）
-
-嘉立创EDA的项目文件。
-
-#### Model（模型）
-
-每个型号键盘使用到的模型文件，加工文件。
+* Eight PCBs covering all three keyboard models for the left and right hand, with the LCEDA (JLCEDA) project included.
+* VIA keymap configuration files, plus precompiled firmware.
+* Mechanical model design files.
 
 ---
 
-## 制作指南
+## Repository layout
 
-### PCB：
+#### Docs (documentation)
 
-1-右手键盘-热插拔(大)：板材FR-4，板厚1.6mm，四层板，层压结构JLC04161H-3313，阻抗管控+/-20%。
+Chip datasheets and images.
 
-1-左手键盘-焊板(小)：板材FR-4，板厚1.6mm，双层板，ALPS黄轴插入时需稍用力安装到位。
+#### Firmware
 
-1-左手键盘-热插拔(大)：板材FR-4，板厚1.6mm，四层板，层压结构JLC04161H-3313，阻抗管控+/-20%。
+QMK firmware for the three keyboard models, and the JSON files used for remapping in VIA.
 
-2-TypeC：板材FR-4，板厚1.6mm，双层板，标识CON1（仅适用于大键盘）。
+#### Hardware
 
-3-轨迹球：板材FR-4，板厚1.6mm，双层板，模块需注意焊接方向，标识CON3。
+The JLCEDA project file.
 
-4-鼠标滚轮：板材FR-4，板厚1.6mm，双层板，建议使用7mm高编码器，6mm高按键，按键触发压力≤180g，标识CON2。
+#### Model
 
-5-方向按键：板材FR-4，板厚1.6mm，双层板，ALPS黄轴插入时需稍用力安装到位，标识CON4。
+The model files and fabrication files used by each keyboard model.
 
-6-主控板-左手(小)：板材FR-4，板厚1.6mm，双层板。
+---
 
-> * 其中3款为键盘控制公用小板 `《3-轨迹球》《4-鼠标滚轮》《5-方向按键》`。
-> * `《5-方向按键》`和 `《1-左手键盘-焊板(小)》`，按键轴使用ALPS黄轴。
-> * 注意左右手大键盘并非完全镜像。
-> * 轨迹球控制使用SPI1通道，滚轮有单独两条信号线，这可以使得替换其它控制设备而不需要较大的调整。
-> * 主控使用 STM32G431CBU6。
-> * 兼容A to C 或 C to C 数据线。
+## Build guide
 
-### 打印件：
+### PCBs
 
-键帽：树脂、PLA等。
+The boards are numbered below; note that item 1 covers three different main keyboard PCBs (right-hand large, left-hand small, left-hand large), which together with items 2–6 makes eight boards in total.
 
-轨迹球座：树脂、PLA等。
+1 – Right-hand keyboard, hot-swap (large): FR-4, 1.6 mm thick, 4 layers, stackup JLC04161H-3313, controlled impedance with a ±20% tolerance.
 
-鼠标左右键：树脂、PLA等。
+1 – Left-hand keyboard, soldered (small): FR-4, 1.6 mm thick, 2 layers. The ALPS yellow switches need a bit of firm pressure to seat fully when inserted.
 
-外壳：树脂、PLA等。
+1 – Left-hand keyboard, hot-swap (large): FR-4, 1.6 mm thick, 4 layers, stackup JLC04161H-3313, controlled impedance with a ±20% tolerance.
 
-底座：树脂、PLA等。
+2 – USB Type-C board: FR-4, 1.6 mm thick, 2 layers, marked CON1 (large keyboards only).
 
-### 加工：
+3 – Trackball board: FR-4, 1.6 mm thick, 2 layers. Pay attention to the module's orientation when soldering. Marked CON3.
 
-定位板：推荐材料pom，厚1.5mm。
+4 – Mouse scroll-wheel board: FR-4, 1.6 mm thick, 2 layers. A 7 mm-tall rotary encoder and 6 mm-tall switches are recommended; switch actuation force ≤ 180 gf. Marked CON2.
 
-定位板棉条：单面留胶。
+5 – Arrow-key board: FR-4, 1.6 mm thick, 2 layers. The ALPS yellow switches need a bit of firm pressure to seat fully when inserted. Marked CON4.
 
-夹心棉：推荐材料poron，厚3.5mm。
+6 – Main controller board, left hand (small): FR-4, 1.6 mm thick, 2 layers.
 
-轴座棉：厚2mm。
+> * Items `3-Trackball`, `4-Mouse scroll-wheel` and `5-Arrow-key` are small boards shared by all three keyboard variants.
+> * `5-Arrow-key` and `1-Left-hand keyboard, soldered (small)` use ALPS yellow switches.
+> * Note that the left-hand and right-hand large keyboards are not exact mirror images of each other.
+> * The trackball is driven over the SPI1 peripheral, and the scroll wheel gets two dedicated signal lines. That lets you substitute a different input device without much rework.
+> * The main controller is an STM32G431CBU6.
+> * Works with both A-to-C and C-to-C cables.
 
-底棉：推荐材料poron，厚4mm。
+### 3D-printed parts
 
-硅胶垫（仅小键盘使用）：厚5mm，硬度Shore 00-10。
+Keycaps: resin, PLA, etc.
 
-### 五金：
+Trackball seat: resin, PLA, etc.
 
-|                    | 大键盘用量（颗） | 小键盘用量（颗） |
+Left/right mouse buttons: resin, PLA, etc.
+
+Top case: resin, PLA, etc.
+
+Base: resin, PLA, etc.
+
+### Cut/fabricated parts
+
+Switch plate: POM recommended, 1.5 mm thick.
+
+Plate gasket strips: adhesive on one side only.
+
+Gasket sandwich foam: Poron recommended, 3.5 mm thick.
+
+Switch-seat foam: 2 mm thick.
+
+Case-bottom foam: Poron recommended, 4 mm thick.
+
+Silicone pad (small keyboard only): 5 mm thick, Shore 00-10 hardness.
+
+### Fasteners
+
+|                    | Qty, large keyboard (pcs) | Qty, small keyboard (pcs) |
 | :----------------- | :--------------: | :--------------: |
-| M3×3×4热熔铜螺母 |        8        |        8        |
-| M2×2×3热熔铜螺母 |        2        |        -        |
-| M2×3×3热熔铜螺母 |        17        |        12        |
-| M3×6沉头螺丝      |        2        |        6        |
-| M3×15沉头螺丝     |        -        |        4        |
-| M3×22沉头螺丝     |        6        |        -        |
-| M2×8杯头螺丝      |        4        |        4        |
-| M2×3杯头螺丝      |        2        |        -        |
-| M2×5杯头螺丝      |        13        |        8        |
-| M3×16扁头螺丝     |        -        |        2        |
+| M3×3×4 heat-set brass insert |        8        |        8        |
+| M2×2×3 heat-set brass insert |        2        |        -        |
+| M2×3×3 heat-set brass insert |        17        |        12        |
+| M3×6 countersunk screw      |        2        |        6        |
+| M3×15 countersunk screw     |        -        |        4        |
+| M3×22 countersunk screw     |        6        |        -        |
+| M2×8 socket-head cap screw      |        4        |        4        |
+| M2×3 socket-head cap screw      |        2        |        -        |
+| M2×5 socket-head cap screw      |        13        |        8        |
+| M3×16 flat-head screw     |        -        |        2        |
 
-### 其它：
+### Other parts
 
-轨迹球：直径25mm，材质PTFE。
+Trackball: 25 mm diameter, PTFE.
 
-润滑球：直径2mm，材质PTFE，安装于打印件轨迹球座中，数量6颗。
+Glide balls: 2 mm diameter, PTFE, 6 pcs, fitted into the printed trackball seat.
 
-滚轮：推荐直径19mm-20mm之间，厚4mm-5mm之间，材质金属。
+Scroll wheel: 19–20 mm diameter and 4–5 mm thick recommended, metal.
 
-卫星轴：2U钢板卫星轴。
+Stabilizers: 2U steel plate-mount stabilizers.
 
-按键轴：小键盘57颗超小ALPS黄轴，大键盘57颗常见机械轴。
+Switches: 57 ultra-small ALPS yellow switches for the small keyboard; 57 standard mechanical switches for the large keyboard.
 
-排线：间距0.5mm，8P反向，10cm2条，15cm2条。
+Ribbon cables (FPC): 0.5 mm pitch, 8-position, reversed type — two 10 cm and two 15 cm.
 
-> * 控制板和小板的FPC座均有CON标识，对应接口相接。
-> * 文件内使用可上下接FPC排线座，需要注意排线座均下接的情况下，使用反向排线连接。
+> * The FPC connectors on the main board and on the small boards all carry a CON label; connect matching labels to each other.
+> * The design uses FPC connectors that can be terminated from either the top or the bottom side. Note that if every connector is terminated on the bottom side, reversed (flipped) ribbon cables must be used.
 
-### 模型结构：
+### Model structure
 
-![左手小键盘爆炸](/Docs/Image/左手小键盘爆炸图.jpg "左手小键盘爆炸图")
+![Left-hand small keyboard, exploded view](/Docs/Image/左手小键盘爆炸图.jpg "Left-hand small keyboard, exploded view")
 
-![左手大键盘爆炸](/Docs/Image/左手大键盘爆炸图.jpg "左手大键盘爆炸图")
+![Left-hand large keyboard, exploded view](/Docs/Image/左手大键盘爆炸图.jpg "Left-hand large keyboard, exploded view")
 
-### 安装顺序：
+### Assembly order
 
-> 以大键盘为例
+> The large keyboard is used as the example.
 
-**装配前的前置工作**
+**Preparation before assembly**
 
-* 先将4块小PCB使用排线连接至键盘本体PCB，烧录程序。
-* 安装3-5个轴体，滚轮和轨迹球。装配前确保功能是正常的。
-* 在打印的外壳与底座对应位置，安装正确的热熔铜螺母。
-* 键帽印字。
-* 将棉条贴在定位板突出部分（正反面都有）。
+* First connect the four small PCBs to the keyboard's main PCB with the ribbon cables, and flash the firmware.
+* Fit three to five switches, plus the scroll wheel and the trackball. Make sure everything works before you start assembling.
+* Install the correct heat-set brass inserts into the matching positions in the printed top case and base.
+* Print the legends on the keycaps.
+* Stick the gasket strips onto the raised sections of the switch plate (both the top and the bottom side).
 
-> 第一次烧录固件时，可以按住PCB背面标有 "B" 的按钮，再插入USB线进行固件烧录。
+> The first time you flash the firmware, hold down the button marked "B" on the back of the PCB, then plug in the USB cable to flash.
 >
-> 若更新固件可以按住键盘上的 "ESC" 键，再插入USB线进行固件烧录。
+> To update the firmware afterwards, hold down "ESC" on the keyboard, then plug in the USB cable to flash.
 >
-> 更多可以参考 [Flashing Your Keyboard (QMK)](https://docs.qmk.fm/newbs_flashing)
+> For more detail see [Flashing Your Keyboard (QMK)](https://docs.qmk.fm/newbs_flashing)
 
-**接下来开始装配**
+**Now start assembling**
 
-1. 将4块小板使用螺丝安装到底座对应位置（注意排线和安装方向），轨迹球座在下方安装螺丝。
-2. 将左右键使用螺丝固定在键盘PCB上。
-3. 从下到上以底棉、轴座棉、键盘PCB、夹心棉、定位板顺序放入底座扇形区域。
-4. 插入按键轴体。
-5. 放入外壳，在下方使用螺丝固定。
-6. 安装键帽，完成装配。
+1. Screw the four small boards onto the matching positions in the base (mind the ribbon cable routing and the orientation). The screws for the trackball seat are fitted from underneath.
+2. Screw the left and right mouse buttons onto the keyboard PCB.
+3. Into the fan-shaped area of the base, place the stack in this order from bottom to top: case-bottom foam, switch-seat foam, keyboard PCB, gasket sandwich foam, switch plate.
+4. Insert the switches.
+5. Put the top case in place and fasten it from underneath with the screws.
+6. Fit the keycaps. Assembly is complete.
 
-> 螺丝螺母安装指南可以参考[这里](https://github.com/htx-studio/One-Handed-Keyboard/tree/main/Model)
+> For the screw and insert installation guide, see [here](https://github.com/htx-studio/One-Handed-Keyboard/tree/main/Model)
 
-最后，这是我们第一次开源项目，如果有什么不足欢迎大家批评指正，感谢大家。
+This is our first open-source project. It surely has shortcomings, and we welcome your criticism and corrections. Thank you.
 
 ---
 
-## 引用
+## References
 
 [Quantum Mechanical Keyboard Firmware](https://docs.qmk.fm/)
 
