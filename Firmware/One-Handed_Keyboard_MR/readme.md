@@ -1,8 +1,8 @@
 # One-Handed_Keyboard_MR
 
-![右手大键盘正面](/Docs/Image/右手大键盘正面.jpg "")
+![Right-hand large keyboard, front](/Docs/Image/right-large-keyboard-front.jpg "")
 
-![右手大键盘侧面](/Docs/Image/右手大键盘左侧.jpg "")
+![Right-hand large keyboard, side](/Docs/Image/right-large-keyboard-left-side.jpg "")
 
 ---
 

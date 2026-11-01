@@ -4,9 +4,9 @@
 
 *This README is translated from the original Chinese. Part numbers, product names and code identifiers are kept as in the original.*
 
-![Left-hand small keyboard, right side](/Docs/Image/左手小键盘右侧面.jpg "Left-hand small keyboard")
+![Left-hand small keyboard, right side](/Docs/Image/left-small-keyboard-right-side.jpg "Left-hand small keyboard")
 
-![Left-hand large keyboard, right side](/Docs/Image/左手大键盘右侧.jpg "Left-hand large keyboard")
+![Left-hand large keyboard, right side](/Docs/Image/left-large-keyboard-right-side.jpg "Left-hand large keyboard")
 
 This is a wired-only (single-mode) mechanical keyboard with an integrated trackball. The firmware is built on [QMK](https://github.com/qmk/qmk_firmware) — our thanks to everyone who contributes to the QMK community.
 
@@ -137,9 +137,9 @@ Ribbon cables (FPC): 0.5 mm pitch, 8-position, reversed type — two 10 cm and t
 
 ### Model structure
 
-![Left-hand small keyboard, exploded view](/Docs/Image/左手小键盘爆炸图.jpg "Left-hand small keyboard, exploded view")
+![Left-hand small keyboard, exploded view](/Docs/Image/left-small-keyboard-exploded-view.jpg "Left-hand small keyboard, exploded view")
 
-![Left-hand large keyboard, exploded view](/Docs/Image/左手大键盘爆炸图.jpg "Left-hand large keyboard, exploded view")
+![Left-hand large keyboard, exploded view](/Docs/Image/left-large-keyboard-exploded-view.jpg "Left-hand large keyboard, exploded view")
 
 ### Assembly order
 
