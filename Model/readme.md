@@ -1,36 +1,33 @@
-## 热熔螺母与紧固件安装指南
+## Heat-set insert and fastener installation guide
 
-#### 大键盘
+#### Large keyboard
 
-> 以左手大键盘为例
+> The left-hand large keyboard is used as the example here.
 
-![左手大键盘外壳铜螺母安装示意图](/Docs/Image/左手大键盘外壳铜螺母安装示意图.jpg "左手大键盘外壳铜螺母安装示意图")
+![Left-hand large keyboard: heat-set insert installation in the top case](/Docs/Image/left-large-keyboard-top-case-insert-guide.jpg "Left-hand large keyboard: heat-set insert installation in the top case")
 
-![左手大键盘底座铜螺母安装示意图](/Docs/Image/左手大键盘底座铜螺母安装示意图.jpg "左手大键盘底座铜螺母安装示意图")
+![Left-hand large keyboard: heat-set insert installation in the base](/Docs/Image/left-large-keyboard-base-insert-guide.jpg "Left-hand large keyboard: heat-set insert installation in the base")
 
-![左手大键盘底部螺丝安装示意图](/Docs/Image/左手大键盘底部螺丝安装示意图.jpg "左手大键盘底部螺丝安装示意图")
+![Left-hand large keyboard: bottom screw installation](/Docs/Image/left-large-keyboard-bottom-screw-guide.jpg "Left-hand large keyboard: bottom screw installation")
 
-![左手大键盘棉条安装示意图](/Docs/Image/左手大键盘棉条安装示意图.jpg "左手大键盘棉条安装示意图")
+![Left-hand large keyboard: gasket strip installation](/Docs/Image/left-large-keyboard-gasket-strip-guide.jpg "Left-hand large keyboard: gasket strip installation")
 
-![大键盘鼠标键铜螺母安装示意图](/Docs/Image/大键盘鼠标键铜螺母安装示意图.jpg "大键盘鼠标键铜螺母安装示意图")
+![Large keyboard: heat-set insert installation for the mouse buttons](/Docs/Image/large-keyboard-mouse-button-insert-guide.jpg "Large keyboard: heat-set insert installation for the mouse buttons")
 
-#### 小键盘
+#### Small keyboard
 
-![左手小键盘外壳铜螺母安装示意图](/Docs/Image/左手小键盘外壳铜螺母安装示意图.jpg "左手小键盘外壳铜螺母安装示意图")
+![Left-hand small keyboard: heat-set insert installation in the top case](/Docs/Image/left-small-keyboard-top-case-insert-guide.jpg "Left-hand small keyboard: heat-set insert installation in the top case")
 
-![左手小键盘底座铜螺母安装示意图](/Docs/Image/左手小键盘底座铜螺母安装示意图.jpg "左手小键盘底座铜螺母安装示意图")
+![Left-hand small keyboard: heat-set insert installation in the base](/Docs/Image/left-small-keyboard-base-insert-guide.jpg "Left-hand small keyboard: heat-set insert installation in the base")
 
-![左手小键盘底部螺丝安装示意图](/Docs/Image/左手小键盘底部螺丝安装示意图.jpg "左手小键盘底部螺丝安装示意图")
+![Left-hand small keyboard: bottom screw installation](/Docs/Image/left-small-keyboard-bottom-screw-guide.jpg "Left-hand small keyboard: bottom screw installation")
 
-![小键盘鼠标键铜螺母安装示意图](/Docs/Image/小键盘鼠标键铜螺母安装示意图.jpg "小键盘鼠标键铜螺母安装示意图")
+![Small keyboard: heat-set insert installation for the mouse buttons](/Docs/Image/small-keyboard-mouse-button-insert-guide.jpg "Small keyboard: heat-set insert installation for the mouse buttons")
 
-![小键盘键帽不同层区分](/Docs/Image/小键盘键帽不同层区分.jpg "小键盘键帽不同层区分")
+![Small keyboard: identifying the keycap layers](/Docs/Image/small-keyboard-keycap-layer-identification.jpg "Small keyboard: identifying the keycap layers")
 
-> 小键盘与大键盘键帽区分方式相同
+> The large keyboard's keycaps are identified the same way.
 
-#### 其它
+#### Other
 
-![轨迹球安装示意图](/Docs/Image/轨迹球安装示意图.jpg "轨迹球安装示意图")
-
-
-
+![Trackball installation guide](/Docs/Image/trackball-installation-guide.jpg "Trackball installation guide")
